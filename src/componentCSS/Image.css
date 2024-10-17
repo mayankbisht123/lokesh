@@ -1,0 +1,39 @@
+.galary.light
+{  
+  margin-top: 50px;
+  margin-left: 60px;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+}
+
+.galary.dark
+{
+  margin-top: 50px;
+  margin-left: 60px;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color:#121212
+}
+
+.galary.light > *, 
+.galary.dark > * {
+  width: 23.5%;
+  height: 308px;
+}
+
+.galary.light a, 
+.galary.dark a {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
