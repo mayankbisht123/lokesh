@@ -1,5 +1,6 @@
 import React from 'react';
 import '../componentCSS/Nav.css';
+import {Link} from 'react-router-dom';
 
 const Nav=(props)=>{
   
@@ -26,8 +27,8 @@ const handleDropdown=(event)=>{
 return(
 <>
 <div className={`navbar ${props.mode}`}>
-    <a href="/">{props.home}</a>
-    <a href="/">{props.about}</a>
+    <Link to="/">{props.home}</Link>
+    <Link to="/about">{props.about}</Link>
     <div className="dropdown">
       <a href="/" onClick={handleDropdown} className="dropbtn">{props.cont}</a>
       <div className="dropdown-content">

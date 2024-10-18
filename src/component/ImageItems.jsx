@@ -5,7 +5,7 @@ const ImageItems = (props) =>{
     
     return(
         <>
-            <div className='container'>
+            <div className='container-item'>
                 <img src={props.url} alt='news'/>
                 <div className='product'>
                     <h4>{props.name}</h4>

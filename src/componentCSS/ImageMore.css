@@ -1,15 +1,22 @@
-.container{
+.container.light{
     color: black;
-    margin-top: 470px;
+    margin-left: 60px;
+}
+
+.container.dark{
+    color: white;
     margin-left: 60px;
 }
 
 .container .desc{
     font-size: large;
-    margin-bottom: 10px;   
+    margin-bottom: 400px;
+    margin-top: 90px;
 }
 
 .container .desc p{
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 
@@ -20,7 +27,9 @@
     height: auto;
 }
 
-.container .images >*{ 
-    object-fit:cover;
+.container .images >*{
+    margin-bottom: 20px;
+    max-height: 700px; 
+    object-fit:contain;
 }
 

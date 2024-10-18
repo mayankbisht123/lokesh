@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Nav from './component/Nav';
 import Image from './component/Image';
 import ImageMore from './component/ImageMore';
+import About from './component/About';
 import './App.css';
 import{
   BrowserRouter as Router,
@@ -37,10 +38,11 @@ const App = ()=>{
   return(
     <>
     <Router>
-      <Nav home='Home' about='About' cont='Contacts' email='E-Mail' no='Phone' address='Address' mode={mode} toogleMode={toogleMode} />
+    <Nav home='Home' about='About' cont='Contacts' email='E-Mail' no='Phone' address='Address' mode={mode} toogleMode={toogleMode} />
       <Routes>
         <Route exact path='/' element={<Image mode={mode}/>}/>
-        <Route exact path="/imageMore" element={<ImageMore/>}/>
+        <Route exact path='/about' element={<About mode={mode}/>}/>
+        <Route exact path="/imageMore" element={<ImageMore mode={mode}/>}/>
       </Routes>
     </Router>
     </>

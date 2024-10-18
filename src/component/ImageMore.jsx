@@ -2,12 +2,15 @@ import React from 'react';
 import '../componentCSS/ImageMore.css';
 import { useLocation } from 'react-router-dom';
 
-const ImageMore = () =>{
+const ImageMore = (props) =>{
     const location=useLocation();
-    const item=location.state || {};
+    const {url1,url2,url3}=location.state || {};
+    // const url1="https://cdnb.artstation.com/p/assets/images/images/061/349/469/large/lokeshrawat-rawat-untitled3.jpg?1725527943";
+    // const url2="https://cdna.artstation.com/p/assets/images/images/061/349/466/large/lokeshrawat-rawat-untitled7.jpg?1680592244";
+    // const url3="https://cdnb.artstation.com/p/assets/images/images/061/349/473/large/lokeshrawat-rawat-untitled2.jpg?1680592253";
     return(
         <>
-            <div className='container'>
+            <div className={`container ${props.mode}`}>
                <div className='desc'>
                 <center><h2>Description</h2></center>
                 <p>This is a random item created by lokesh asdasdasdasdas asdas dasda sdasd asdasdasdasdas dadadadasda dad asd ad asda sd a da d ad asd as das d ad asd as da da sd ad asd </p>
@@ -17,9 +20,9 @@ const ImageMore = () =>{
                     Not Supported
                </video> */}
                <div className='images'>
-                {item.url1 && <img src={item.url1} alt="sda"/>}
-                {item.url2 && <img src={item.url2} alt="sda"/>}
-                {item.url3 && <img src={item.url3} alt="sda"/>}
+                {url1 && <img src={url1} alt="sda"/>}
+                {url2 && <img src={url2} alt="sda"/>}
+                {url3 && <img src={url3} alt="sda"/>}
                </div> 
             </div>
         </>
