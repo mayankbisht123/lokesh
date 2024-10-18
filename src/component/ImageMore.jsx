@@ -1,7 +1,10 @@
 import React from 'react';
 import '../componentCSS/ImageMore.css';
+import { useLocation } from 'react-router-dom';
 
-const ImageMore = (props) =>{
+const ImageMore = () =>{
+    const location=useLocation();
+    const item=location.state || {};
     return(
         <>
             <div className='container'>
@@ -14,9 +17,9 @@ const ImageMore = (props) =>{
                     Not Supported
                </video> */}
                <div className='images'>
-                <img src={props.url1} alt="sda"/>
-                <img src={props.url2} alt="sda"/>
-                <img src={props.url3} alt="sda"/>
+                {item.url1 && <img src={item.url1} alt="sda"/>}
+                {item.url2 && <img src={item.url2} alt="sda"/>}
+                {item.url3 && <img src={item.url3} alt="sda"/>}
                </div> 
             </div>
         </>

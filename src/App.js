@@ -1,8 +1,13 @@
 import React,{useState} from 'react';
 import Nav from './component/Nav';
-import ImageDisplayer from './component/ImageDisplayer';
+import Image from './component/Image';
+import ImageMore from './component/ImageMore';
 import './App.css';
-// import ImageMore from './component/ImageMore';
+import{
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 const App = ()=>{
   let [mode,setMode]=useState('light');
@@ -31,15 +36,13 @@ const App = ()=>{
 
   return(
     <>
+    <Router>
       <Nav home='Home' about='About' cont='Contacts' email='E-Mail' no='Phone' address='Address' mode={mode} toogleMode={toogleMode} />
-      <ImageDisplayer mode={mode}/>
-      {/* <ImageMore url1="https://cdna.artstation.com/p/assets/images/images/080/865/376/large/lokesh-rawat-r4-min.jpg?1728734269"
-        url2="https://cdna.artstation.com/p/assets/images/images/080/865/380/large/lokesh-rawat-r6-min.jpg?1728734279"
-        url3="https://cdna.artstation.com/p/assets/images/images/080/865/378/large/lokesh-rawat-r5-min.jpg?1728734274"  
-      /> */}
-
-      
-      
+      <Routes>
+        <Route exact path='/' element={<Image mode={mode}/>}/>
+        <Route exact path="/imageMore" element={<ImageMore/>}/>
+      </Routes>
+    </Router>
     </>
   );
 }
